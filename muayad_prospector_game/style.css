@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./img/bg1.jpg);
+    background-size: cover;
+
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #f9f6f6;
+    font-family: 'Bree Serif', serif;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-shadow: 3px 3px rgb(189, 142, 0);
+
+}
+
+ul {
+    /* *horizontally centering our board*/
+    margin: 0 auto;
+    /*making our board 400 by 400px*/
+    width: 15%;
+    height: 200px;
+    /* *lets get rid of those pecky bullet points */
+    list-style: none;
+    /* *make the context flex that will wrap horizontall and equally space s*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: horizontal wrap;
+    justify-content: center;
+    align-content: space-between;
+
+
+
+
+}
+
+li {
+    /* *lets make each cell have a black background, and take up aproximately 33% width and height*/
+    height: 33%;
+    flex-basis: 31%;
+    /* *now we center our text vertically and horizontall */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/closed.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+
+
+.hovering {
+    background-image: url(./img/key.png);
+
+}
+
+.collectedNoGold {
+    background-image: url(./img/empty.png);
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
+#reset {
+
+    background-color: #f1a81e;
+    width: 90px;
+    height: 50px;
+    padding: 7px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #234e64;
+    font-family: 'Concert One', cursive;
+    border-radius: 50px;
+    margin-left: 30px;
+    animation: myButton 1s alternate infinite;
+
+}
+
+#reset:hover {
+    cursor: pointer;
+
+}
+
+
+section div {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+p {
+    padding-left: 10px;
+    font-size: 20px;
+    color: #ffa200;
+    text-shadow: 2px 1px #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 0px;
+    margin-bottom: 25px;
+}
+
+.game {
+    font-size: 70px;
+    text-align: center;
+    color: #ffa600;
+    text-shadow: 1px 2px black;
+    margin-top: -60px;
+    padding-bottom: 25px;
+}
+
+.collectedGold {
+    background-image: url(./img/box1.png.);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 55px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    text-shadow: 4px 5px #000000;
+    animation: myGold 1s ease-in-out alternate;
+
+}
+
+
+@keyframes myGold {
+
+    50% {
+
+        transform: rotate(-5deg);
+    }
+
+    75% {
+
+        transform: rotate(5deg);
+    }
+
+}
+
+@keyframes myButton {
+
+
+    0% {
+        background-color: #f1a81e
+    }
+
+    100% {
+        background-color: #53a803;
+    }
+}
